@@ -13,14 +13,14 @@ Implement Firebase Crashlytics according to <a href="https://firebase.google.com
 
 ```
 
-### Step 3: Create a main application that extends from "Application" class and add apply ZeroCrash code
+### Step 3: Create a main application that extends from "Application" class and apply ZeroCrash code
 ```
 class MyApplication:Application() {
     override fun onCreate() {
         super.onCreate()
         ZeroCrash.Builder(this)
             .showMessage(true)// optional
-            .setMessage("An error occured. So closing the app") //optional
+            .setMessage("An error occured. So closing the app") //optional - if not set then causing error is showen as message
             .closeApp(true,5000) //optional - close app after certain milli seconds
             .create()
     }
