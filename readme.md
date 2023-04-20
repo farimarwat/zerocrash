@@ -13,7 +13,7 @@ Implement Firebase Crashlytics according to <a href="https://firebase.google.com
 
 ```
 
-### Step 3: Create an main application that extends from "Application" class and add apply ZeroCrash code
+### Step 3: Create a main application that extends from "Application" class and add apply ZeroCrash code
 ```
 class MyApplication:Application() {
     override fun onCreate() {
