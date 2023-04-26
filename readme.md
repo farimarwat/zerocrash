@@ -7,33 +7,36 @@ An android library to minimize crashes. It is a small yet most powerfull to hand
 ### Step 1:
 Implement Firebase Crashlytics according to <a href="https://firebase.google.com/docs/crashlytics/get-started?platform=android">google documentation</a>
 
+**Important Note:If you have not integrated firebase crashlytics then don't use this library because it will give errors.**
+
 ### Step 2: Add ZeroCrash dependency
 ```
-    implementation "io.github.farimarwat:zerocrash:1.0"
+    implementation "io.github.farimarwat:zerocrash:1.1"
 
 ```
 
-### Step 3: Create a main application that extends from "Application" class and apply ZeroCrash code
+### Step 3: Initialize ZeroCrash and place it in every activity's onCreate() method where you want to handle crashes
 ```
-class MyApplication:Application() {
-    override fun onCreate() {
-        super.onCreate()
+  override fun onCreate(savedInstanceState: Bundle?) {
+     
+        super.onCreate(savedInstanceState)
         ZeroCrash.Builder(this)
-            .showMessage(true)// optional
-            .setMessage("An error occured. So closing the app") //optional - if not set then causing error is showen as message
-            .closeApp(true,5000) //optional - close app after certain milli seconds
-            .create()
-    }
-}
+            .setTitle("Title")
+            .setMessage("Your message goes here")
+            .start()
+            ...
+            //more code goes here
+  }
 ```
 
-### Final Step: Add the main application in manifest
-```
-  <application
-        android:allowBackup="true"
-        android:name=".MyApplication" // add this
-        ...
-        >
-```
 
 **Note:This is a beta version and need testers to test play console logs. If you have a console account then kindly test it and send me feedback at: farimarwat@gmail.com**
+
+### Change Log
+**V 1.1**
+
+Main Application implementation removed
+
+**V 1.0**
+
+Initial release
