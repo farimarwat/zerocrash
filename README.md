@@ -9,6 +9,8 @@ Implement Firebase Crashlytics according to <a href="https://firebase.google.com
 
 **Important Note:If you have not integrated firebase crashlytics then don't use this library because it will give errors.**
 
+**Example app is included but also integrate firebase crashlytics to the project after cloning**
+
 ### Step 2: Add ZeroCrash dependency
 ```
     implementation "io.github.farimarwat:zerocrash:1.1"
