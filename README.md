@@ -13,7 +13,7 @@ Implement Firebase Crashlytics according to <a href="https://firebase.google.com
 
 ### Step 2: Add ZeroCrash dependency
 ```
-    implementation "io.github.farimarwat:zerocrash:1.2"
+    implementation "io.github.farimarwat:zerocrash:1.3"
 
 ```
 
@@ -25,12 +25,17 @@ Implement Firebase Crashlytics according to <a href="https://firebase.google.com
         ZeroCrash.Builder(this)
             .setTitle("Title")
             .setMessage("Your message goes here")
+            .setFirebaseInstance(FirebaseCrashlytics.getInstance()) //optional to get the crash in firebase
             .start()
             ...
             //more code goes here
   }
 ```
-
+### Important
+While building an instance of ZeroCrash, you must pass context of activity via "this" keyword.
+```
+ZeroCrash.Builder(this)
+```
 
 **Note:This is a beta version and need testers to test play console logs. If you have a console account then kindly test it and send me feedback at: farimarwat@gmail.com**
 
