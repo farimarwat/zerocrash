@@ -42,6 +42,10 @@ ZeroCrash.Builder(this)
 ### Change Log
 **V 1.1**
 
+A bug fixed
+
+**V 1.1**
+
 Main Application implementation removed
 
 **V 1.0**
