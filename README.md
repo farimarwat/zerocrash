@@ -13,7 +13,7 @@ Implement Firebase Crashlytics according to <a href="https://firebase.google.com
 
 ### Step 2: Add ZeroCrash dependency
 ```
-    implementation "io.github.farimarwat:zerocrash:1.1"
+    implementation "io.github.farimarwat:zerocrash:1.2"
 
 ```
 
