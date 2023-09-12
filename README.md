@@ -40,7 +40,7 @@ ZeroCrash.Builder(this)
 **Note:This is a beta version and need testers to test play console logs. If you have a console account then kindly test it and send me feedback at: farimarwat@gmail.com**
 
 ### Change Log
-**V 1.1**
+**V 1.3**
 
 A bug fixed
 
