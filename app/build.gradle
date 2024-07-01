@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.farimarwat.zerocrashlibraryexample'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.farimarwat.zerocrashlibraryexample"
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -109,5 +109,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-crashlytics-ktx'
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
-    implementation "io.github.farimarwat:zerocrash:1.1"
+    implementation "io.github.farimarwat:zerocrash:1.5"
 }

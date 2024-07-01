@@ -4,27 +4,23 @@ An android library to minimize crashes. It is a small yet most powerfull to hand
 
 **Note:This library handles a crash by itself but still logs will be sent to crashlytics but it is necessary that you have already implemented firebase crashlytics and working correctly.**
 
-### Step 1:
-Implement Firebase Crashlytics according to <a href="https://firebase.google.com/docs/crashlytics/get-started?platform=android">google documentation</a>
-
-**Important Note:If you have not integrated firebase crashlytics then don't use this library because it will give errors.**
 
 **Example app is included but also integrate firebase crashlytics to the project after cloning**
 
-### Step 2: Add ZeroCrash dependency
+### Step 1: Add ZeroCrash dependency
 ```
-    implementation "io.github.farimarwat:zerocrash:1.3"
+    implementation "io.github.farimarwat:zerocrash:1.6"
 
 ```
 
-### Step 3: Initialize ZeroCrash and place it in every activity's onCreate() method where you want to handle crashes
+### Step 2: Initialize ZeroCrash and place it in every activity's onCreate() method where you want to handle crashes
 ```
   override fun onCreate(savedInstanceState: Bundle?) {
      
         super.onCreate(savedInstanceState)
         ZeroCrash.Builder(this)
-            .setTitle("Title")
-            .setMessage("Your message goes here")
+            .setTitle("Title") //optional, default will be showen
+            .setMessage("Your message goes here") // optional,  default stacktrace logs will be showen
             .setFirebaseInstance(FirebaseCrashlytics.getInstance()) //optional to get the crash in firebase
             .start()
             ...
@@ -32,7 +28,7 @@ Implement Firebase Crashlytics according to <a href="https://firebase.google.com
   }
 ```
 ### Important
-While building an instance of ZeroCrash, you must pass context of activity via "this" keyword.
+While building an instance of ZeroCrash, you must pass context of activity via "this" keyword of launcher activity
 ```
 ZeroCrash.Builder(this)
 ```
@@ -40,6 +36,12 @@ ZeroCrash.Builder(this)
 **Note:This is a beta version and need testers to test play console logs. If you have a console account then kindly test it and send me feedback at: farimarwat@gmail.com**
 
 ### Change Log
+**V 1.6**
+Minor bugs fixed
+
+**V 1.5**
+Show crash message via activity
+
 **V 1.3**
 
 A bug fixed
