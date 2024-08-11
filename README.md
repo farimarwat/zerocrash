@@ -1,3 +1,4 @@
+## This library has been deprecated. Now use <a href="https://github.com/farimarwat/grizzly">Grizzly</a>
 
 ### ZeroCrash 
 An android library to minimize crashes. It is a small yet most powerfull to handle crashes automatically and get logs in firebase crashlytics. This will prevent crashes as well as logging to google play console which causes down ranking of the app. In short a crash will not be considered as crash because it is handled gracefully by the library.
